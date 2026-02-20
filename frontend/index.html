@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>First-Time Home Buyer Calculator</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Top Banner (matches your Figma look) -->
+    <header class="topbar">
+      <div class="topbar__inner">
+        <h1 class="topbar__title">First-Time Home Buyer Calculator</h1>
+        <p class="topbar__subtitle">Clear, honest guidance for your path to homeownership</p>
+      </div>
+    </header>
+
+    <!-- Bare minimum "app shell" so it feels real -->
+    <main class="container">
+      <section class="card">
+        <h2 class="card__title">Your Prototype UI Starts Here</h2>
+        <p class="muted">
+          This is the frontend scaffold. Your team can connect the backend + DB and wire a real vertical slice.
+        </p>
+
+        <!-- One “working button” placeholder for your team to wire up -->
+        <div class="row">
+          <button id="saveBtn" class="btn">Save Sample Value</button>
+          <span class="pill" id="statusPill">Not saved</span>
+        </div>
+
+        <p class="muted small" id="statusText">
+          When backend is ready, this button should POST to <code>/api/sample</code> (or similar),
+          update the DB, and return the updated value to display here.
+        </p>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -24,3 +24,36 @@ User → Browser (Frontend) → Backend Server → Database
    ```bash
    git clone <repo-url>
    cd <repo-folder>
+
+## Database Setup
+The project includes SQL scripts in the /db folder that allow anyone to create a local PostgreSQL database for testing.
+db/
+  schema.sql
+  seed.sql
+  
+## Prerequisites
+- PostgreSQL installed
+- psql available in your PATH
+
+## Verify installation:
+psql --version
+
+## Step 1: Create the Database
+createdb homebuyer_db
+Or inside psql:
+CREATE DATABASE homebuyer_db;
+
+## Step 2: Run the Schema Script
+From the project root:
+psql -d homebuyer_db -f db/schema.sql
+This creates all tables and relationships defined in the ERD.
+
+## Step 3: Seed Sample Data
+psql -d homebuyer_db -f db/seed.sql
+This inserts sample users, scenarios, mortgage details, results, and tips for testing.
+Verify Tables
+psql -d homebuyer_db
+Then run:
+\dt
+SELECT * FROM scenario;
+The database is now ready for backend integration and local testing.

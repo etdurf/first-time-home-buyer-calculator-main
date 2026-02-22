@@ -125,27 +125,33 @@ Before running this project, ensure you have the following installed:
 
 ## Installation and Setup
 
-### Step 1: Navigate to the Project
+### Step 1: Clone the Repository
+
+```bash
+git clone <your-repo-url>
+```
+
+### Step 2: Navigate to the Project
 
 ```bash
 cd first-time-home-buyer-calculator-main
 ```
 
-### Step 2: Frontend Setup
+### Step 3: Frontend Setup
 
 ```bash
 cd frontend
 npm install --legacy-peer-deps
 ```
 
-### Step 3: Backend Setup
+### Step 4: Backend Setup
 
 ```bash
 cd ../backend
 npm install
 ```
 
-### Step 4: Database Setup
+### Step 5: Database Setup
 
 1. **Navigate back to the project root:**
 
@@ -176,7 +182,7 @@ npm install
    psql -U postgres -d homebuyer -c "SELECT * FROM users;"
    ```
 
-### Step 5: Environment Configuration
+### Step 6: Environment Configuration
 
 1. **The backend `.env` file is already configured for local development:**
    - Check `backend/.env` with your database credentials
